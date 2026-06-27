@@ -5,6 +5,7 @@ export const BurgerMenu = () => (
     viewBox="0 0 20 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="cursor-pointer"
   >
     <path
       d="M1 1H19M1 8H19M1 15H19"
