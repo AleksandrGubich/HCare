@@ -1,0 +1,15 @@
+.active-tab {
+  position: relative;
+  font-weight: 500;
+  color: #171725;
+}
+
+.active-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: #2bb567;
+}

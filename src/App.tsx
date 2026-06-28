@@ -8,7 +8,7 @@ import { Notifications } from "./assets/svgs/Notifications";
 function App() {
   return (
     <div className="min-h-dvh flex flex-col">
-      <header className="flex justify-between items-center px-7 py-3 sm:px-9.5 sm:py-4 border-b-2 border-solid border-[#E2E2EA]">
+      <header className="flex justify-between items-center px-7 py-3 sm:px-9.5 sm:py-4 border-b border-solid border-[#E2E2EA]">
         <div className="flex items-center gap-3.5 sm:gap-7">
           <BurgerMenu />
           <div className="flex items-center gap-2 cursor-pointer">
@@ -23,7 +23,7 @@ function App() {
           <img
             src={PersonAvatar}
             alt="PesronAvatar"
-            className="border-2 border-[#EEEEEE] rounded-4xl cursor-pointer"
+            className="border-2 border-[#EEEEEE] rounded-4xl cursor-pointer w-9 h-9"
           />
         </div>
       </header>
