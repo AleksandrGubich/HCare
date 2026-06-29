@@ -23,7 +23,7 @@ function App() {
           <img
             src={PersonAvatar}
             alt="PesronAvatar"
-            className="border-2 border-[#EEEEEE] rounded-4xl cursor-pointer w-9 h-9"
+            className="border border-[#EEEEEE] rounded-4xl cursor-pointer w-9 h-9"
           />
         </div>
       </header>
