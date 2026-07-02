@@ -19,7 +19,9 @@ function App() {
           </div>
         </div>
         <div className="flex items-center gap-3.5 sm:gap-7">
-          <Notifications />
+          <button>
+            <Notifications />
+          </button>
           <img
             src={PersonAvatar}
             alt="PesronAvatar"

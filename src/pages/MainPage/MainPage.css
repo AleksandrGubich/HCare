@@ -4,7 +4,8 @@
   color: #171725;
 }
 
-.active-tab::after {
+.active-tab::after,
+.active-subtab::after {
   content: "";
   position: absolute;
   left: 0;
@@ -12,4 +13,10 @@
   bottom: -1px;
   height: 2px;
   background-color: #2bb567;
+}
+
+.active-subtab {
+  position: relative;
+  font-weight: 500;
+  color: #242424;
 }
