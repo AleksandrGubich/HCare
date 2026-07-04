@@ -5,9 +5,10 @@ import { EditBtnGray } from "../../assets/svgs/EditBtnGray";
 import { EditBtnGreen } from "../../assets/svgs/EditBtnGreen";
 import { IncomingCallIcon } from "../../assets/svgs/IncomingCallIcon";
 import { LinkIcon } from "../../assets/svgs/LinkIcon";
-import { OutgoingCallIcon } from "../../assets/svgs/OutGoingCallIcon";
+import { OutgoingCallIcon } from "../../assets/svgs/OutgoingCallIcon";
 import { PersonIcon } from "../../assets/svgs/PersonIcon";
 import { SMSIcon } from "../../assets/svgs/SMSIcon";
+import { StarIcon } from "../../assets/svgs/StarIcon";
 import "./MainPage.css";
 
 export const MainPage = () => {
@@ -42,7 +43,7 @@ export const MainPage = () => {
 
       <div className="flex justify-between p-9 gap-4">
         <div className="flex flex-col flex-1 gap-4">
-          <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
+          <div className="flex flex-col border border-[#ECECED] rounded-xl">
             <div className="flex items-center justify-between p-4 border-b border-[#ECECED]">
               <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
                 Contact info
@@ -76,7 +77,6 @@ export const MainPage = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
             <div className="flex items-center p-4 border-b border-[#ECECED]">
               <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
@@ -226,7 +226,6 @@ export const MainPage = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
             <div className="flex items-center justify-between p-4 border-b border-[#ECECED]">
               <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
@@ -244,6 +243,161 @@ export const MainPage = () => {
               <div>
                 <p className="text-[#B5B5BE] text-xs">Insurance Provider</p>
                 <p className="text-[#44444F] text-sm">Green cross shield</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col flex-1 gap-4">
+          <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
+            <div className="flex items-center justify-between p-4 border-b border-[#ECECED]">
+              <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
+                Appointments
+              </p>
+              <button className="flex items-center justify-center w-9 h-9 border border-[#ECECED] rounded-xl cursor-pointer">
+                <AddBtnGreen />
+              </button>
+            </div>
+            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] text-xs text-[#848485] font-roboto">
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75">Start Time</div>
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75 border-l border-[#ECECED]">
+                Speciality
+              </div>
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75 border-l border-[#ECECED]">
+                Status
+              </div>
+            </div>
+            <div>
+              <div className="flex border-b border-[#ECECED] py-4 text-xs text-[#303030]">
+                <div className="flex flex-col flex-1 gap-1.5 px-4.75">
+                  <div>12-12-2021</div>
+                  <div>9:40 AM</div>
+                </div>
+                <div className="flex-1 px-4.75">Radiologist</div>
+                <div className="flex-1 px-4.75 text-[#FFA41B]">Cancelled</div>
+              </div>
+            </div>
+            <div>
+              <div className="flex py-4 text-xs text-[#303030]">
+                <div className="flex flex-col flex-1 gap-1.5 px-4.75">
+                  <div>15-12-2021</div>
+                  <div>12:00 AM</div>
+                </div>
+                <div className="flex-1 px-4.75">Surgeon</div>
+                <div className="flex-1 px-4.75 text-[#22C04E]">Confirmed</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
+            <div className="flex items-center justify-between p-4 border-b border-[#ECECED]">
+              <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
+                Surveys
+              </p>
+              <button className="flex items-center justify-center w-9 h-9 border border-[#ECECED] rounded-xl cursor-pointer">
+                <AddBtnGreen />
+              </button>
+            </div>
+            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] text-xs text-[#848485] font-roboto">
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75">Title</div>
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75 border-l border-[#ECECED]">
+                Completed on
+              </div>
+            </div>
+            <div>
+              <div className="flex py-4 text-xs text-[#303030]">
+                <div className="flex-1 px-4.75">Radiologist</div>
+                <div className="flex-1 px-4.75">Cancelled</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-1 flex-col border border-[#ECECED] rounded-xl">
+            <div className="flex items-center justify-between p-4 border-b border-[#ECECED]">
+              <p className="flex items-center font-poppins text-[#171725] font-semibold h-9">
+                Feedback
+              </p>
+              <button className="flex items-center justify-center w-9 h-9 border border-[#ECECED] rounded-xl cursor-pointer">
+                <AddBtnGreen />
+              </button>
+            </div>
+            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] text-xs text-[#848485] font-roboto">
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75">Case Title</div>
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75 border-l border-[#ECECED]">
+                Date
+              </div>
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75 border-l border-[#ECECED]">
+                Status
+              </div>
+            </div>
+            <div>
+              <div className="flex border-b border-[#ECECED] py-4 text-xs text-[#303030]">
+                <div className="flex-1 px-4.75">Dr.Johnes</div>
+                <div className="flex-1 px-4.75">15-12-2021</div>
+                <div className="flex flex-1 px-4.75">
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-1 flex-col rounded-xl border border-[#ECECED]">
+            <div className="flex items-center justify-between border-b border-[#ECECED] p-4">
+              <p className="flex h-9 items-center font-poppins font-semibold text-[#171725]">
+                Contact preferences
+              </p>
+            </div>
+            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] font-roboto text-xs text-[#848485]">
+              <div className="flex-1 px-4.75 pt-2.5 pb-2.75">
+                Contact Method
+              </div>
+            </div>
+            <div className="font-roboto text-sm text-[#303030] py-2">
+              <div className="flex items-center justify-between px-4.75 py-2">
+                <div>Email</div>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-[#B5B5BE]">DENY</span>
+                  <button
+                    type="button"
+                    className="relative h-4 w-8.5 rounded-full bg-[#D9D9D9]"
+                    aria-label="Email preference disabled"
+                  >
+                    <span className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#FC1C1C]" />
+                  </button>
+                  <span className="text-[#2BB567]">ALLOW</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between px-4.75 py-2">
+                <div>Mobile Phone</div>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-[#B5B5BE]">DENY</span>
+                  <button
+                    type="button"
+                    className="relative h-4 w-8.5 rounded-full bg-[#D9D9D9]"
+                    aria-label="Mobile phone preference disabled"
+                  >
+                    <span className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#FC1C1C]" />
+                  </button>
+                  <span className="text-[#2BB567]">ALLOW</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between px-4.75 py-2">
+                <div>Mail</div>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-[#B5B5BE]">DENY</span>
+                  <button
+                    type="button"
+                    className="relative h-4 w-8.5 rounded-full bg-[#D9D9D9]"
+                    aria-label="Mail preference disabled"
+                  >
+                    <span className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#FC1C1C]" />
+                  </button>
+                  <span className="text-[#2BB567]">ALLOW</span>
+                </div>
               </div>
             </div>
           </div>
