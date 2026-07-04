@@ -1,15 +1,15 @@
 type LinkIconProps = {
-  classNameProp?: string;
+  className?: string;
 };
 
-export const LinkIcon = ({ classNameProp }: LinkIconProps) => (
+export const LinkIcon = ({ className }: LinkIconProps) => (
   <svg
     width="21"
     height="21"
     viewBox="0 0 21 21"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={classNameProp}
+    className={className}
   >
     <path
       d="M2.86125 10.5C2.14346 9.6409 1.75016 8.557 1.75 7.4375C1.75 4.795 3.91125 2.625 6.5625 2.625H10.9375C13.58 2.625 15.75 4.795 15.75 7.4375C15.75 10.08 13.5887 12.25 10.9375 12.25H8.75"

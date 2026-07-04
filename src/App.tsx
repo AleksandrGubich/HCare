@@ -7,29 +7,38 @@ import { Notifications } from "./assets/svgs/Notifications";
 
 function App() {
   return (
-    <div className="min-h-dvh flex flex-col">
-      <header className="flex justify-between items-center px-7 py-3 sm:px-9.5 sm:py-4 border-b border-solid border-[#E2E2EA]">
+    <div className="flex min-h-dvh flex-col">
+      <header className="flex items-center justify-between border-b border-solid border-[#E2E2EA] px-5 py-3 sm:px-7 lg:px-9.5 lg:py-4">
         <div className="flex items-center gap-3.5 sm:gap-7">
-          <BurgerMenu />
-          <div className="flex items-center gap-2 cursor-pointer">
-            <img src={HCareIcon} alt="HCareIcon" className="w-7 h-5" />
-            <p className="font-poppins text-xl font-semibold text-[#44444F]">
+          <button type="button" aria-label="Open menu">
+            <BurgerMenu />
+          </button>
+
+          <div className="flex cursor-pointer items-center gap-2">
+            <img src={HCareIcon} alt="HCare logo" className="h-5 w-7" />
+
+            <p className="font-poppins text-lg font-semibold text-[#44444F] sm:text-xl">
               HCare
             </p>
           </div>
         </div>
+
         <div className="flex items-center gap-3.5 sm:gap-7">
-          <button>
+          <button type="button" aria-label="Notifications">
             <Notifications />
           </button>
-          <img
-            src={PersonAvatar}
-            alt="PesronAvatar"
-            className="border border-[#EEEEEE] rounded-4xl cursor-pointer w-9 h-9"
-          />
+
+          <button type="button" aria-label="Open profile">
+            <img
+              src={PersonAvatar}
+              alt="Person avatar"
+              className="h-9 w-9 cursor-pointer rounded-4xl border border-[#EEEEEE]"
+            />
+          </button>
         </div>
       </header>
-      <main className="bg-[#FAFAFA] flex flex-col flex-1 pt-2.5 px-5 sm:px-12.5 sm:pt-3.5 md:px-20 md:pt-4.5 lg:px-30 lg:pt-4.5 xl:px-42.5 xl:pt-6.5 2xl:px-55 2xl:pt-7.5">
+
+      <main className="flex flex-1 flex-col bg-[#FAFAFA] px-4 pt-2.5 sm:px-6 sm:pt-3.5 md:px-10 md:pt-4.5 lg:px-16 xl:px-24 2xl:px-40 2xl:pt-7.5">
         <RouterProvider router={router} />
       </main>
     </div>
