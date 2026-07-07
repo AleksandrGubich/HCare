@@ -1,10 +1,11 @@
 import { SettingsIcon } from "../../assets/svgs/SettingIcon";
 import DocPhoto from "../../assets/DocPhoto.png";
 import { AddDateBtn } from "../../assets/svgs/AddDateBtn";
+import { PageCard } from "../../components/PageCard";
 
 export const MedicalStaff = () => {
   return (
-    <div className="flex-1 overflow-hidden rounded-t-xl bg-white shadow-[0_3px_8px_rgba(0,0,0,0.15)]">
+    <PageCard>
       <div className="flex items-center justify-between p-10">
         <h1 className="font-poppins font-semibold text-2xl text-[#171725]">
           Medical Staff
@@ -197,6 +198,6 @@ export const MedicalStaff = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageCard>
   );
 };
