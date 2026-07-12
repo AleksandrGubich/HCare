@@ -1,75 +1,357 @@
-# React + TypeScript + Vite
+# HCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HCare is a responsive healthcare dashboard built with React and TypeScript. The application provides patient information, medical staff data, appointment details, feedback forms, surveys, activity history, and contact preferences.
 
-Currently, two official plugins are available:
+The interface is adapted for desktop, tablet, and mobile screens.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[Open deployed application](https://h-care-two.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+The application includes three main pages:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Patient Dashboard
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The main page displays:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- patient profile information;
+- contact and personal information;
+- recent patient activities;
+- appointments;
+- insurance information;
+- surveys;
+- feedback history;
+- contact preferences.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Patient data is loaded from the DummyJSON API.
 
+Route:
+
+```text
+/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Medical Staff
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The Medical Staff page displays a responsive table containing:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- employee name and photo;
+- clinic and position;
+- city and country;
+- available working hours;
+- appointment booking action;
+- confirmation status.
 
+Medical staff data is loaded from the DummyJSON API.
+
+Route:
+
+```text
+/medical-staff
 ```
+
+### Feedback
+
+The Feedback page contains a responsive satisfaction survey where users can rate:
+
+- the appointment booking experience;
+- the doctor consultation experience.
+
+Route:
+
+```text
+/feedback
+```
+
+## Technology Stack
+
+- React 19
+- TypeScript
+- Vite
+- TanStack Router
+- TanStack Query
+- Tailwind CSS
+- ESLint
+- DummyJSON API
+
+## Main Dependencies
+
+### Production dependencies
+
+| Dependency               | Purpose                                            |
+| ------------------------ | -------------------------------------------------- |
+| `react`                  | Building the user interface                        |
+| `react-dom`              | Rendering the React application                    |
+| `@tanstack/react-router` | Type-safe application routing                      |
+| `@tanstack/react-query`  | API requests, caching, and server-state management |
+| `tailwindcss`            | Utility-first application styling                  |
+
+### Development dependencies
+
+| Dependency                    | Purpose                                 |
+| ----------------------------- | --------------------------------------- |
+| `typescript`                  | Static type checking                    |
+| `vite`                        | Development server and production build |
+| `@vitejs/plugin-react`        | React integration for Vite              |
+| `@tailwindcss/vite`           | Tailwind CSS integration for Vite       |
+| `eslint`                      | Code quality validation                 |
+| `typescript-eslint`           | TypeScript ESLint support               |
+| `eslint-plugin-react-hooks`   | Validation of React Hooks rules         |
+| `eslint-plugin-react-refresh` | React Fast Refresh validation           |
+| `@tanstack/router-plugin`     | File-based route generation             |
+| `@types/react`                | React TypeScript definitions            |
+| `@types/react-dom`            | React DOM TypeScript definitions        |
+| `@types/node`                 | Node.js TypeScript definitions          |
+
+## Project Architecture
+
+The project uses a modular structure:
+
+```text
+src/
+├── api/          # API request functions
+├── assets/       # Images, icons, and Lighthouse reports
+├── components/   # Reusable UI components
+├── hooks/        # TanStack Query hooks
+├── pages/        # Application pages
+├── routes/       # TanStack Router routes
+├── types/        # TypeScript types
+├── App.tsx
+├── main.tsx
+└── router.ts
+```
+
+The application separates:
+
+- API logic;
+- server-state management;
+- TypeScript data models;
+- reusable interface components;
+- page-level components;
+- routing configuration.
+
+## Getting Started
+
+### Requirements
+
+Install the following software before running the project:
+
+- Node.js 20.19 or newer
+- npm
+
+Check the installed versions:
+
+```bash
+node --version
+npm --version
+```
+
+### Clone the repository
+
+```bash
+git clone https://github.com/AleksandrGubich/HCare
+cd hcare
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Open the address displayed by Vite in the terminal. The default address is usually:
+
+```text
+http://localhost:5173
+```
+
+## Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+The generated files will be placed in:
+
+```text
+dist/
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+The preview server usually starts at:
+
+```text
+http://localhost:4173
+```
+
+## Code Quality
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+Run TypeScript validation and create the production build:
+
+```bash
+npm run build
+```
+
+Before deployment, both commands should finish without errors.
+
+The final project validation includes:
+
+- no TypeScript compilation errors;
+- no ESLint errors;
+- no browser console errors;
+- no HTML validation errors;
+- no CSS validation errors;
+- no JavaScript runtime errors.
+
+## Quality Tool Report
+
+The application was tested with Lighthouse in production mode.
+
+The required minimum result is **90 points in every category**:
+
+- Performance;
+- Accessibility;
+- Best Practices;
+- SEO.
+
+### Patient Page
+
+Route:
+
+```text
+/
+```
+
+![Patient page Lighthouse report](./src/assets/lighthouse/Patient.png)
+
+### Medical Staff Page
+
+Route:
+
+```text
+/medical-staff
+```
+
+![Medical Staff page Lighthouse report](./src/assets/lighthouse/MedicalStaff.png)
+
+### Feedback Page
+
+Route:
+
+```text
+/feedback
+```
+
+![Feedback page Lighthouse report](./src/assets/lighthouse/Feedback.png)
+
+The screenshots contain the Lighthouse reports for the main application pages.
+
+Lighthouse results should be checked again after the final deployment because network conditions, hosting configuration, and production caching can affect the scores.
+
+## Running Lighthouse Tests
+
+Build and preview the production version:
+
+```bash
+npm run build
+npm run preview
+```
+
+Then:
+
+1. Open the application in Google Chrome.
+2. Open Chrome DevTools.
+3. Select the **Lighthouse** tab.
+4. Select **Navigation** mode.
+5. Select the required device type.
+6. Enable:
+
+   - Performance;
+   - Accessibility;
+   - Best Practices;
+   - SEO.
+
+7. Run the audit for each route:
+
+   - `/`;
+   - `/medical-staff`;
+   - `/feedback`.
+
+8. Confirm that every result is at least 90.
+
+## API
+
+The application uses the DummyJSON Users API.
+
+Patient endpoint:
+
+```text
+https://dummyjson.com/users/1
+```
+
+Medical staff endpoint:
+
+```text
+https://dummyjson.com/users?limit=10
+```
+
+TanStack Query is used for:
+
+- loading API data;
+- caching responses;
+- controlling retries;
+- handling loading states;
+- handling error states;
+- preventing unnecessary refetching.
+
+## Responsive Design
+
+The interface supports:
+
+- mobile screens;
+- tablets;
+- laptops;
+- desktop monitors.
+
+Responsive behavior includes:
+
+- adaptive page padding;
+- responsive grid layouts;
+- horizontally scrollable data tables;
+- mobile-friendly navigation;
+- flexible cards and content sections;
+- accessible buttons and controls.
+
+## Accessibility
+
+The project includes:
+
+- semantic heading structure;
+- descriptive image alternative text;
+- accessible button names;
+- `aria-label` attributes for icon buttons;
+- navigation menu state attributes;
+- visible keyboard focus styles;
+- improved text contrast;
+- descriptive rating controls.
