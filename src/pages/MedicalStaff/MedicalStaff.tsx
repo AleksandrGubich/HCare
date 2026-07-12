@@ -1,123 +1,31 @@
 import { SettingsIcon } from "../../assets/svgs/SettingIcon";
-import DocPhoto from "../../assets/DocPhoto.png";
 import { PageCard } from "../../components/PageCard";
 import { MedicalStaffRow } from "../../components/MedicalStaffRow";
-
-type MedicalStaffMember = {
-  id: number;
-  name: string;
-  clinic: string;
-  position: string;
-  cityCountry: string;
-  availableHours: string;
-  status: string;
-  photo: string;
-};
-
-const medicalStaff: MedicalStaffMember[] = [
-  {
-    id: 1,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 2,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 3,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 4,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 5,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 6,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 7,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 8,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 9,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-  {
-    id: 10,
-    name: "Raynald Schmidt",
-    clinic: "Harmony Health",
-    position: "Therapist",
-    cityCountry: "Berlin, Germany",
-    availableHours: "15:00 - 22:00",
-    status: "Confirmed",
-    photo: DocPhoto,
-  },
-];
+import { useMedicalStaff } from "../../hooks/useMedicalStaff";
 
 export const MedicalStaff = () => {
+  const { data: medicalStaff = [], isLoading, isError } = useMedicalStaff();
+
+  if (isLoading) {
+    return (
+      <PageCard>
+        <div className="p-10 font-poppins text-xl font-semibold text-[#171725]">
+          Loading medical staff...
+        </div>
+      </PageCard>
+    );
+  }
+
+  if (isError) {
+    return (
+      <PageCard>
+        <div className="p-10 font-poppins text-xl font-semibold text-red-500">
+          Failed to load medical staff
+        </div>
+      </PageCard>
+    );
+  }
+
   return (
     <PageCard>
       <div className="flex items-center justify-between p-10">

@@ -27,7 +27,8 @@ export const RatingQuestion = ({ question }: RatingQuestionProps) => {
             <button
               key={color}
               type="button"
-              className={`flex aspect-square w-10 shrink-0 items-center justify-center rounded-full border border-[${color}] font-roboto text-sm sm:w-12 md:w-14 lg:w-17.25`}
+              style={{ borderColor: color }}
+              className="flex aspect-square w-10 shrink-0 items-center justify-center rounded-full border font-roboto text-sm sm:w-12 md:w-14 lg:w-17.25"
             >
               {index + 1}
             </button>

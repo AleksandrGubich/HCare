@@ -1,4 +1,3 @@
-import PersonAvatar from "../../assets/PersonAvatar.png";
 import { AddBtnGreen } from "../../assets/svgs/AddBtnGreen";
 import { CalendarIcon } from "../../assets/svgs/CalendarIcon";
 import { EditBtnGray } from "../../assets/svgs/EditBtnGray";
@@ -19,42 +18,48 @@ import { PageCard } from "../../components/PageCard";
 import { PatientTabs } from "../../components/PatientTabs";
 import { SectionCard } from "../../components/SectionCard";
 import { SurveysTable } from "../../components/SurveysTable";
+import { usePatient } from "../../hooks/usePatient";
 import "./MainPage.css";
 
-const contactInfo = [
-  { label: "Full Name", value: "James Brown" },
-  { label: "Phone", value: "07086459584" },
-  { label: "Home Phone", value: "-" },
-  { label: "Address", value: "MBS Residence number 28C." },
-  { label: "Email", value: "jamesbrown@gmail.com" },
-];
-
-const personalInfo = [
-  { label: "Gender", value: "Male" },
-  { label: "Birth (Age)", value: "07/03/1987 (36)" },
-  { label: "Patient ID", value: "9790" },
-  { label: "Nationality", value: "Germany" },
-  { label: "Material status", value: "Not married" },
-  { label: "Emergency contact", value: "23546787690" },
-];
-
-const insuranseInfo = [
+const insuranceInfo = [
   { label: "Member ID", value: "54223467897" },
   { label: "Insurance Provider", value: "Green cross shield" },
 ];
 
 export const MainPage = () => {
+  const { data: patient, isLoading, isError } = usePatient();
+
+  if (isLoading) {
+    return (
+      <PageCard>
+        <div className="p-10 font-poppins text-xl font-semibold text-[#171725]">
+          Loading patient...
+        </div>
+      </PageCard>
+    );
+  }
+
+  if (isError || !patient) {
+    return (
+      <PageCard>
+        <div className="p-10 font-poppins text-xl font-semibold text-red-500">
+          Failed to load patient
+        </div>
+      </PageCard>
+    );
+  }
+
   return (
     <PageCard>
       <div className="flex items-center gap-3 px-5 pt-5 pb-4 sm:px-7 lg:px-9 lg:pt-9 lg:pb-4.5">
         <img
-          src={PersonAvatar}
-          alt="Person avatar"
+          src={patient.photo}
+          alt={patient.fullName}
           className="h-12 w-12 rounded-full sm:h-auto sm:w-auto"
         />
         <div className="flex min-w-0 flex-col gap-1">
           <h1 className="truncate font-poppins text-base font-semibold text-[#171725]">
-            James Brown
+            {patient.fullName}
           </h1>
           <p className="font-manrope text-xs text-[#92929D]">Patient</p>
         </div>
@@ -71,10 +76,10 @@ export const MainPage = () => {
               </IconButton>
             }
           >
-            <InfoList items={contactInfo} />
+            <InfoList items={patient.contactInfo} />
           </SectionCard>
           <SectionCard title="Personal">
-            <InfoList items={personalInfo} />
+            <InfoList items={patient.personalInfo} />
           </SectionCard>
         </div>
 
@@ -145,7 +150,7 @@ export const MainPage = () => {
               </IconButton>
             }
           >
-            <InfoList items={insuranseInfo} />
+            <InfoList items={insuranceInfo} />
           </SectionCard>
         </div>
 

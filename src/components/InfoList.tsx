@@ -1,7 +1,4 @@
-type InfoItem = {
-  label: string;
-  value: string;
-};
+import type { InfoItem } from "../types/patient";
 
 type InfoListProps = {
   items: InfoItem[];

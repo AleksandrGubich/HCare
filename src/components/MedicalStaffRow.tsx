@@ -1,4 +1,5 @@
 import { AddDateBtn } from "../assets/svgs/AddDateBtn";
+import type { MedicalStaffStatus } from "../types/medicalStaff";
 
 type MedicalStaffRowProps = {
   name: string;
@@ -6,7 +7,7 @@ type MedicalStaffRowProps = {
   position: string;
   cityCountry: string;
   availableHours: string;
-  status: string;
+  status: MedicalStaffStatus;
   photo: string;
 };
 
@@ -41,7 +42,10 @@ export const MedicalStaffRow = ({
       <p className="font-poppins font-medium text-sm text-[#242424]">
         {availableHours}
       </p>
-      <button className="flex items-center gap-3 font-poppins font-medium text-sm text-[#2BB567]">
+      <button
+        type="button"
+        className="flex items-center gap-3 font-poppins font-medium text-sm text-[#2BB567]"
+      >
         <AddDateBtn />
         Book date
       </button>
