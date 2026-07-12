@@ -44,7 +44,7 @@ export const MedicalStaff = () => {
       <div className="px-10 pb-10">
         <div className="overflow-x-auto">
           <div className="min-w-272">
-            <div className="grid grid-cols-[minmax(262px,1.4fr)_minmax(194px,1fr)_minmax(194px,1fr)_minmax(262px,1.4fr)_minmax(136px,0.8fr)] border border-[#ECECED] rounded-t-xl px-5 py-5 font-poppins font-medium text-sm text-[#92929D]">
+            <div className="grid grid-cols-[minmax(262px,1.4fr)_minmax(194px,1fr)_minmax(194px,1fr)_minmax(262px,1.4fr)_minmax(136px,0.8fr)] border border-[#ECECED] rounded-t-xl px-5 py-5 font-poppins font-medium text-sm text-[#5F5F6B]">
               <p>Name</p>
               <p>City/Country</p>
               <p>Available hours</p>

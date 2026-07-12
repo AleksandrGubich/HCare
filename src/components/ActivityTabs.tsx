@@ -14,7 +14,7 @@ export const ActivityTabs = ({ activeTab }: ActivityTabsProps) => {
           <button
             key={tab}
             type="button"
-            className={`${isActive ? "active-subtab" : ""} relative flex min-w-28 flex-1 shrink-0 cursor-pointer items-center justify-center px-5 pb-2.5 font-poppins text-sm text-[#92929D]`}
+            className={`${isActive ? "active-subtab" : ""} relative flex min-w-28 flex-1 shrink-0 cursor-pointer items-center justify-center px-5 pb-2.5 font-poppins text-sm text-[#5F5F6B]`}
           >
             {tab}
           </button>

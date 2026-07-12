@@ -61,7 +61,7 @@ export const MainPage = () => {
           <h1 className="truncate font-poppins text-base font-semibold text-[#171725]">
             {patient.fullName}
           </h1>
-          <p className="font-manrope text-xs text-[#92929D]">Patient</p>
+          <p className="font-manrope text-xs text-[#5F5F6B]">Patient</p>
         </div>
       </div>
       <PatientTabs activeTab="Summary" />
@@ -186,7 +186,7 @@ export const MainPage = () => {
             <FeedbackTable />
           </SectionCard>
           <SectionCard title="Contact preferences">
-            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] font-roboto text-xs text-[#848485]">
+            <div className="flex border-b border-[#ECECED] bg-[#F8F8F8] font-roboto text-xs text-[#5F5F6B]">
               <div className="flex-1 px-4.75 pt-2.5 pb-2.75">
                 Contact Method
               </div>

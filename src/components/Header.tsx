@@ -18,7 +18,16 @@ export const Header = () => {
     <header className="relative flex items-center justify-between border-b border-[#E2E2EA] px-5 py-3 sm:px-7 lg:px-9.5 lg:py-4">
       <div className="flex items-center gap-4">
         <div className="relative">
-          <button type="button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            type="button"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={isMenuOpen}
+            aria-controls="main-navigation-menu"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg"
+          >
             <BurgerMenu />
           </button>
 
@@ -61,7 +70,13 @@ export const Header = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <Notifications />
+        <button
+          type="button"
+          aria-label="Open notifications"
+          className="flex h-10 w-10 items-center justify-center rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F7A46]"
+        >
+          <Notifications />
+        </button>
 
         <img
           src={patient?.photo}

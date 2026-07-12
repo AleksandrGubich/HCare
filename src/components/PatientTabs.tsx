@@ -20,7 +20,7 @@ export const PatientTabs = ({ activeTab }: PatientTabsProps) => {
           <button
             key={tab}
             type="button"
-            className={`${isActive ? "active-tab" : ""} relative flex h-13 shrink-0 cursor-pointer items-center justify-center px-5 font-poppins text-sm text-[#92929D] sm:h-15 sm:px-6`}
+            className={`${isActive ? "active-tab" : ""} relative flex h-13 shrink-0 cursor-pointer items-center justify-center px-5 font-poppins text-sm text-[#5F5F6B] sm:h-15 sm:px-6`}
           >
             {tab}
           </button>

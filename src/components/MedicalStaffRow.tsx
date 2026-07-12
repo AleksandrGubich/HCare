@@ -32,8 +32,8 @@ export const MedicalStaffRow = ({
           <p className="truncate font-poppins font-medium text-sm text-[#242424]">
             {name}
           </p>
-          <p className="font-roboto text-xs text-[#818181]">{clinic}</p>
-          <p className="font-roboto text-xs text-[#818181]">{position}</p>
+          <p className="font-roboto text-xs text-[#5F5F6B]">{clinic}</p>
+          <p className="font-roboto text-xs text-[#5F5F6B]">{position}</p>
         </div>
       </div>
       <p className="font-poppins font-medium text-sm text-[#242424]">
@@ -44,7 +44,7 @@ export const MedicalStaffRow = ({
       </p>
       <button
         type="button"
-        className="flex items-center gap-3 font-poppins font-medium text-sm text-[#2BB567]"
+        className="flex items-center gap-3 font-poppins font-medium text-sm text-[#1F7A46]"
       >
         <AddDateBtn />
         Book date

@@ -8,7 +8,7 @@ export const AddBtnGreen = () => (
   >
     <path
       d="M0.75 6.75H12.75M6.75 12.75V0.75"
-      stroke="#2BB567"
+      stroke="#1F7A46"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"

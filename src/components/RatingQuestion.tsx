@@ -1,5 +1,5 @@
 const ratingColors = [
-  "#FF0000",
+  "#C1121F",
   "#FF240C",
   "#FF4919",
   "#FF6D25",
@@ -28,6 +28,7 @@ export const RatingQuestion = ({ question }: RatingQuestionProps) => {
               key={color}
               type="button"
               style={{ borderColor: color }}
+              aria-label={`Rating ${index + 1} out of 10`}
               className="flex aspect-square w-10 shrink-0 items-center justify-center rounded-full border font-roboto text-sm sm:w-12 md:w-14 lg:w-17.25"
             >
               {index + 1}
@@ -36,10 +37,10 @@ export const RatingQuestion = ({ question }: RatingQuestionProps) => {
         })}
       </div>
       <div className="flex flex-col gap-2 font-roboto text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base">
-        <p className="text-[#FF0000] sm:text-[#92929D]">
+        <p className="text-[#C1121F] sm:text-[#5F5F6B]">
           Absolutely not satisfied
         </p>
-        <p className="text-[#00FFC2] sm:text-[#92929D]">Absolutely satisfied</p>
+        <p className="text-[#00FFC2] sm:text-[#5F5F6B]">Absolutely satisfied</p>
       </div>
     </div>
   );

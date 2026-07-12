@@ -1,4 +1,4 @@
-import FeedbackBG from "../../assets/FeedbackBG.png";
+import FeedbackBG from "../../assets/FeedbackBG.webp";
 import { PageCard } from "../../components/PageCard";
 import { RatingQuestion } from "../../components/RatingQuestion";
 
@@ -13,13 +13,14 @@ export const Feedback = () => {
       <img
         src={FeedbackBG}
         alt="Feedback"
+        fetchPriority="high"
         className="h-40 w-full object-cover sm:h-56 lg:h-auto"
       />
       <div className="flex flex-col items-center justify-center gap-3.5 px-5 py-6 text-center sm:px-8 lg:px-16 xl:px-33 xl:py-8">
         <h1 className="font-poppins text-xl font-semibold text-[#171725] sm:text-2xl">
           We value your feedback!
         </h1>
-        <p className="font-roboto text-sm text-[#92929D] sm:text-base">
+        <p className="font-roboto text-sm text-[#5F5F6B] sm:text-base">
           Share your opinion on the quality of our services
         </p>
       </div>

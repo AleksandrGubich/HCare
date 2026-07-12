@@ -21,12 +21,12 @@ export const ActivityItem = ({
           <p className="font-poppins font-medium text-sm text-[#242424]">
             {title}
           </p>
-          <p className="font-roboto text-xs text-[#818181]">
-            {authorPrefix} <span className="text-[#2BB567]">{author}</span>
+          <p className="font-roboto text-xs text-[#5F5F6B]">
+            {authorPrefix} <span className="text-[#1F7A46]">{author}</span>
           </p>
         </div>
       </div>
-      <p className="font-roboto text-xs text-[#818181]">{date}</p>
+      <p className="font-roboto text-xs text-[#5F5F6B]">{date}</p>
     </div>
   );
 };

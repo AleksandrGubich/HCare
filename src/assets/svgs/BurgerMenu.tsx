@@ -9,7 +9,7 @@ export const BurgerMenu = () => (
   >
     <path
       d="M1 1H19M1 8H19M1 15H19"
-      stroke="#848485"
+      stroke="#5F5F6B"
       stroke-width="2"
       stroke-linecap="round"
     />
