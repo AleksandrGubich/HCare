@@ -1,7 +1,7 @@
 import { SettingsIcon } from "../../assets/svgs/SettingIcon";
-import { PageCard } from "../../components/PageCard";
-import { MedicalStaffRow } from "../../components/MedicalStaffRow";
-import { useMedicalStaff } from "../../hooks/useMedicalStaff";
+import { PageCard } from "../../components/common/PageCard";
+import { MedicalStaffRow } from "../../components/medical-staff/components/MedicalStaffRow";
+import { useMedicalStaff } from "../../components/medical-staff/hooks/useMedicalStaff";
 
 export const MedicalStaff = () => {
   const { data: medicalStaff = [], isLoading, isError } = useMedicalStaff();

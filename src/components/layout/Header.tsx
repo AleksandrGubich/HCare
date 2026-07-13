@@ -1,9 +1,9 @@
 import { useState } from "react";
-import HCareIcon from "../assets/HCareIcon.png";
-import { BurgerMenu } from "../assets/svgs/BurgerMenu";
-import { Notifications } from "../assets/svgs/Notifications";
-import { usePatient } from "../hooks/usePatient";
-import { router } from "../router";
+import HCareIcon from "../../assets/HCareIcon.png";
+import { BurgerMenu } from "../../assets/svgs/BurgerMenu";
+import { Notifications } from "../../assets/svgs/Notifications";
+import { router } from "../../router";
+import { usePatient } from "../patient/hooks/usePatient";
 
 export const Header = () => {
   const { data: patient } = usePatient();

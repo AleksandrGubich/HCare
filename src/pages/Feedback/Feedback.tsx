@@ -1,6 +1,6 @@
 import FeedbackBG from "../../assets/FeedbackBG.webp";
-import { PageCard } from "../../components/PageCard";
-import { RatingQuestion } from "../../components/RatingQuestion";
+import { PageCard } from "../../components/common/PageCard";
+import { RatingQuestion } from "../../components/feedback/components/RatingQuestion";
 
 export const Feedback = () => {
   return (

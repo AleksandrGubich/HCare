@@ -1,4 +1,4 @@
-import { AddDateBtn } from "../assets/svgs/AddDateBtn";
+import { AddDateBtn } from "../../../assets/svgs/AddDateBtn";
 import type { MedicalStaffStatus } from "../types/medicalStaff";
 
 type MedicalStaffRowProps = {

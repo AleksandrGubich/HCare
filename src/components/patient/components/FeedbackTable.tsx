@@ -1,4 +1,4 @@
-import { StarIcon } from "../assets/svgs/StarIcon";
+import { StarIcon } from "../../../assets/svgs/StarIcon";
 
 export const FeedbackTable = () => {
   return (

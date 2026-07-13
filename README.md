@@ -105,23 +105,115 @@ Route:
 | `@types/react-dom`            | React DOM TypeScript definitions        |
 | `@types/node`                 | Node.js TypeScript definitions          |
 
-## Project Architecture
+## Project Structure
 
-The project uses a modular structure:
+The project uses a modular structure. Feature-specific components, API requests, hooks, and types are grouped by application domain.
 
 ```text
-src/
-├── api/          # API request functions
-├── assets/       # Images, icons, and Lighthouse reports
-├── components/   # Reusable UI components
-├── hooks/        # TanStack Query hooks
-├── pages/        # Application pages
-├── routes/       # TanStack Router routes
-├── types/        # TypeScript types
-├── App.tsx
-├── main.tsx
-└── router.ts
+├── public
+│   ├── favicon.svg
+│   ├── icons.svg
+│   └── robots.txt
+├── src
+│   ├── assets
+│   │   ├── lighthouse
+│   │   │   ├── Feedback.png
+│   │   │   ├── MedicalStaff.png
+│   │   │   └── Patient.png
+│   │   ├── svgs
+│   │   │   ├── AddBtnGreen.tsx
+│   │   │   ├── AddDateBtn.tsx
+│   │   │   ├── BurgerMenu.tsx
+│   │   │   ├── CalendarIcon.tsx
+│   │   │   ├── EditBtnGray.tsx
+│   │   │   ├── EditBtnGreen.tsx
+│   │   │   ├── IncomingCallIcon.tsx
+│   │   │   ├── LinkIcon.tsx
+│   │   │   ├── Notifications.tsx
+│   │   │   ├── OutgoingCallIcon.tsx
+│   │   │   ├── PersonIcon.tsx
+│   │   │   ├── SettingIcon.tsx
+│   │   │   ├── SMSIcon.tsx
+│   │   │   └── StarIcon.tsx
+│   │   ├── FeedbackBG.webp
+│   │   └── HCareIcon.png
+│   ├── components
+│   │   ├── common
+│   │   │   ├── IconButton.tsx
+│   │   │   ├── PageCard.tsx
+│   │   │   └── SectionCard.tsx
+│   │   ├── feedback
+│   │   │   └── components
+│   │   │       └── RatingQuestion.tsx
+│   │   ├── layout
+│   │   │   └── Header.tsx
+│   │   ├── medical-staff
+│   │   │   ├── api
+│   │   │   │   └── medicalStaffApi.ts
+│   │   │   ├── components
+│   │   │   │   └── MedicalStaffRow.tsx
+│   │   │   ├── hooks
+│   │   │   │   └── useMedicalStaff.ts
+│   │   │   └── types
+│   │   │       └── medicalStaff.ts
+│   │   └── patient
+│   │       ├── api
+│   │       │   └── patientApi.ts
+│   │       ├── components
+│   │       │   ├── ActivityItem.tsx
+│   │       │   ├── ActivityTabs.tsx
+│   │       │   ├── AppointmentsTable.tsx
+│   │       │   ├── ContactMethod.tsx
+│   │       │   ├── FeedbackTable.tsx
+│   │       │   ├── InfoList.tsx
+│   │       │   ├── PatientTabs.tsx
+│   │       │   └── SurveysTable.tsx
+│   │       ├── hooks
+│   │       │   └── usePatient.ts
+│   │       └── types
+│   │           └── patient.ts
+│   ├── pages
+│   │   ├── Feedback
+│   │   │   └── Feedback.tsx
+│   │   ├── MainPage
+│   │   │   ├── MainPage.css
+│   │   │   └── MainPage.tsx
+│   │   └── MedicalStaff
+│   │       └── MedicalStaff.tsx
+│   ├── routes
+│   │   ├── __root.tsx
+│   │   ├── feedback.tsx
+│   │   ├── index.tsx
+│   │   └── medical-staff.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── router.ts
+│   └── routeTree.gen.ts
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vercel.json
+└── vite.config.ts
 ```
+
+The main directories are organized as follows:
+
+- `assets` contains images, Lighthouse reports, and SVG components;
+- `components/common` contains reusable UI components shared across the application;
+- `components/layout` contains application layout components;
+- `components/patient` contains patient-related API logic, hooks, types, and UI components;
+- `components/medical-staff` contains medical-staff-related API logic, hooks, types, and UI components;
+- `components/feedback` contains components used by the feedback page;
+- `pages` contains the main application pages;
+- `routes` contains the TanStack Router file-based route configuration.
+
+````
 
 The application separates:
 
@@ -146,7 +238,7 @@ Check the installed versions:
 ```bash
 node --version
 npm --version
-```
+````
 
 ### Clone the repository
 
